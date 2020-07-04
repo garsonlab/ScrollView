@@ -44,7 +44,7 @@ public class ScrollViewEditor : Editor
     SerializedProperty m_HorizontalScrollbarSpacing;
     SerializedProperty m_VerticalScrollbarSpacing;
     SerializedProperty m_OnValueChanged;
-    SerializedProperty m_OnRenderItem;
+    SerializedProperty m_OnItemRender;
     AnimBool m_ShowElasticity;
     AnimBool m_ShowDecelerationRate;
     AnimBool m_ShowAutoAttach;
@@ -96,7 +96,7 @@ public class ScrollViewEditor : Editor
         m_HorizontalScrollbarSpacing = serializedObject.FindProperty("m_HorizontalScrollbarSpacing");
         m_VerticalScrollbarSpacing = serializedObject.FindProperty("m_VerticalScrollbarSpacing");
         m_OnValueChanged = serializedObject.FindProperty("m_OnValueChanged");
-        m_OnRenderItem = serializedObject.FindProperty("m_OnRenderItem");
+        this.m_OnItemRender = serializedObject.FindProperty("m_OnItemRender");
 
         m_ShowElasticity = new AnimBool(Repaint);
         m_ShowDecelerationRate = new AnimBool(Repaint);
@@ -278,7 +278,7 @@ public class ScrollViewEditor : Editor
         if (m_EventSetting)
         {
             EditorGUILayout.PropertyField(m_OnValueChanged, true);
-            EditorGUILayout.PropertyField(m_OnRenderItem, true);
+            EditorGUILayout.PropertyField(this.m_OnItemRender, true);
         }
 
         #endregion

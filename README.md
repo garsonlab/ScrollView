@@ -2,6 +2,10 @@
 
 基于UGUI，支持无限、循环、动画缩放，ScaleCurve的作用值为（0-1）
 
+##### 增加食用栗子及修正
+
+![](Screenshot/4.png)
+
 ![](https://github.com/garsonlab/ScrollView/raw/master/Screenshot/1.png "屏幕渲染")
 
 ![](https://github.com/garsonlab/ScrollView/raw/master/Screenshot/2.png "Hierarchy")

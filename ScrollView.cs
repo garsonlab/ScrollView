@@ -432,7 +432,7 @@ namespace UnityEngine.UI
 
             if (m_ViewPort == null)
             {
-                var view = transform.FindChild("Viewport");
+                var view = transform.Find("Viewport");
                 if (view)
                     m_ViewPort = view as RectTransform;
                 else
